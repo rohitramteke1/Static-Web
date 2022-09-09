@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Orbitron:wght@400;500;600;700;900&family=Poppins:ital@0;1&display=swap');
+
+:root {
+    --text-color: #000;
+    --container-color: #444;
+    --nb-bg: #f1f1f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* background-color: var(--nb-bg); */
+    box-shadow: 0px 0px 10px #00000041;
+}
+
+.navbar .logo img{
+    width: 200px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    position: absolute;
+    top: center;
+    right: 10px;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.navbar ul li a{
+    padding: 5px 0;
+    position: relative;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li:hover a:before {
+    width: 100%;
+    background-color: #212121;
+}
+
+/* All Container's */
+
+.container {
+    position: relative;
+}
+
+.home-container {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.home-content p{
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 10px;
+}
+
+.about-container {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+.portfolio-container {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+.github-container {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    .menu-btn {
+        display: flex;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1;
+        cursor: pointer;
+        color: white;
+        background-color: #a1a1a1;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar .logo img{
+        width: 100px;
+        margin-left: -15px; 
+    }
+    .navbar ul {
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    .navbar ul li {
+        font-size: 12px;
+        padding: 5px;
+        margin: 10px;
+    }
+    .navbar ul li a{
+        color: var(--text-color);
+    }
+}
